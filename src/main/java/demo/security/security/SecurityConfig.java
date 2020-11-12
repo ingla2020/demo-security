@@ -78,7 +78,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.anyRequest().authenticated()
 			.and()
 				.csrf().disable();	
-			
+		
+		
+		/*
+        http.authorizeRequests()
+                .antMatchers(HttpMethod.GET, "/vup/v1/api/purposing")
+                .permitAll().anyRequest().authenticated().and().csrf().disable()
+                .headers().xssProtection();		
+		
+		*/
+		
 	}
 	
 
